@@ -59,6 +59,7 @@ function mostraAlternativas(){
         botaoAlternativa.textContent = alternativa.texto;
         botaoAlternativa.addEventListener("click", function(){
             atual ++;
+            mostraPergunta();
         })
         caixaAlternativas.appendChild(botaoAlternativa);
     }
