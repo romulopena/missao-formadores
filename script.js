@@ -36,8 +36,14 @@ const perguntas = [
     {
         enunciado: "Como podemos incentivar o uso de energia solar e outras formas de energia limpa, especialmente em comunidades carentes?",
         alternativas: [
-            "Promovendo a instalação de painéis solares em escolas e centros comunitários de comunidades marginalizadas.", 
-            "Defendendo políticas públicas que subsidiem a energia solar para famílias de baixa renda."
+            {
+                texto: "Defendendo políticas públicas que subsidiem a energia solar para famílias de baixa renda.", 
+                afirmacao:"afirmacao"
+            },
+            {
+                texto: "Promovendo a instalação de painéis solares em escolas e centros comunitários de comunidades marginalizadas.", 
+                afirmacao:"afirmacao"
+            }
         ]
     } 
 ];
@@ -50,6 +56,7 @@ function mostraPergunta(){
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
+    textoResultado.textContent = "";
     mostraAlternativas();
 }
 
@@ -62,10 +69,9 @@ function mostraAlternativas(){
     }
 }
 function respostaSelecionada (opcaoSelecionada){
-    const afirmacao = opcaoSelecionada.afirmacao;
-    historiaFinal = afirmacao;
+    const afirmacoes = opcaoSelecionada.afirmacoes;
+    historiaFinal = afirmacoes;
     atual++
     mostraPergunta();
 }
-
 mostraPergunta();
