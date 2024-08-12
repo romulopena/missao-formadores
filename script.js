@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Participando de campanhas de conscientização e educação sobre igualdade racial.",
-                afirmacao: "afirmacao"
+                afirmacao: "afirmacao1"
             },
             {
                 texto: "Denunciando atos de discriminação e apoiando políticas públicas inclusivas.",
-                afirmacao: "afirmacao"
+                afirmacao: "afirmacao2"
             }
             
         ]
@@ -24,11 +24,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Verificando a veracidade das informações antes de compartilhar qualquer conteúdo, especialmente sobre temas sensíveis como racismo.", 
-                afirmacao: "afirmacao"
+                afirmacao: "afirmacao3"
             },
             {
                 texto: "Educando amigos e familiares sobre os perigos das fake news e incentivando-os a não compartilhar conteúdos falsos que perpetuam o racismo.",
-                afirmacao: "afirmacao"
+                afirmacao: "afirmacao4"
             }
             
         ]
@@ -38,11 +38,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Defendendo políticas públicas que subsidiem a energia solar para famílias de baixa renda.", 
-                afirmacao:"afirmacao"
+                afirmacao:"afirmacao5"
             },
             {
                 texto: "Promovendo a instalação de painéis solares em escolas e centros comunitários de comunidades marginalizadas.", 
-                afirmacao:"afirmacao"
+                afirmacao:"afirmacao6"
             }
         ]
     } 
@@ -68,13 +68,13 @@ function mostraAlternativas(){
     for (const alternativa of perguntaAtual.alternativas){
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener('click', ()=> respostaSelecionada(alternativa));
+        botaoAlternativa.addEventListener("click", ()=> respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 function respostaSelecionada (opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal += afirmacoes + " ";
+    const afirmacao = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacao + " ";
     atual++
     mostraPergunta();
 }
