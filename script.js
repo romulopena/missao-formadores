@@ -53,6 +53,9 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta(){
+    if (atual >= perguntas.length){
+        mostraResultado();
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
@@ -64,14 +67,20 @@ function mostraAlternativas(){
     for (const alternativa of perguntaAtual.alternativas){
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", ()=> respostaSelecionada(alternativa));
+        botaoAlternativa.addEventListener('click', ()=> respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 function respostaSelecionada (opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
+    historiaFinal += afirmacoes + " ";
     atual++
     mostraPergunta();
 }
-mostraPergunta();
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Resumindo...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+    mostraPergunta();
