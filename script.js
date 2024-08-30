@@ -6,54 +6,55 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Como você acredita que podemos combater o racismo na sociedade?",
+        enunciado: "TEXTO DA PERGUNTA 1",
         alternativas: [
             {
-                texto: "Participando de campanhas de conscientização e educação sobre igualdade racial.",
-                afirmacao: "afirmacao1"
+                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 1",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 1"
             },
             {
-                texto: "Denunciando atos de discriminação e apoiando políticas públicas inclusivas.",
-                afirmacao: "afirmacao2"
+                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 1",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 1"
             }
-            
+
         ]
     },
     {
-        enunciado: "Como você pode ajudar a combater a disseminação de fake news, especialmente as que perpetuam o racismo?",
+        enunciado: "TEXTO DA PERGUNTA 2",
         alternativas: [
             {
-                texto: "Verificando a veracidade das informações antes de compartilhar qualquer conteúdo, especialmente sobre temas sensíveis como racismo.", 
-                afirmacao: "afirmacao3"
+                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 2",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 2"
             },
             {
-                texto: "Educando amigos e familiares sobre os perigos das fake news e incentivando-os a não compartilhar conteúdos falsos que perpetuam o racismo.",
-                afirmacao: "afirmacao4"
+                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 2",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 2"
             }
-            
+
         ]
     },
     {
-        enunciado: "Como podemos incentivar o uso de energia solar e outras formas de energia limpa, especialmente em comunidades carentes?",
+        enunciado: "TEXTO DA PERGUNTA 3",
         alternativas: [
             {
-                texto: "Defendendo políticas públicas que subsidiem a energia solar para famílias de baixa renda.", 
-                afirmacao:"afirmacao5"
+                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 3",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 3"
             },
             {
-                texto: "Promovendo a instalação de painéis solares em escolas e centros comunitários de comunidades marginalizadas.", 
-                afirmacao:"afirmacao6"
+                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 3",
+                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 3"
             }
+
         ]
-    } 
+    }
 ];
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPergunta(){
-    if (atual >= perguntas.length){
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
         mostraResultado();
         return;
     }
@@ -64,24 +65,24 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for (const alternativa of perguntaAtual.alternativas){
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", ()=> respostaSelecionada(alternativa));
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
-function respostaSelecionada (opcaoSelecionada){
+function respostaSelecionada(opcaoSelecionada) {
     const afirmacao = opcaoSelecionada.afirmacao;
     historiaFinal += afirmacao + " ";
     atual++
     mostraPergunta();
 }
 
-function mostraResultado(){
+function mostraResultado() {
     caixaPerguntas.textContent = "Resumindo...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
-    mostraPergunta();
+mostraPergunta();
