@@ -6,43 +6,43 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "TEXTO DA PERGUNTA 1",
+        enunciado: "Como você acha que a tecnologia vai influenciar a decisão de faltas no futuro?",
         alternativas: [
             {
-                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 1",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 1"
+                texto: "A decisão de faltas será baseada em tecnologia de reconhecimento facial",
+                afirmacao: "O uso de reconhecimento facial pode reduzir erros humanos."
             },
             {
-                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 1",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 1"
+                texto: "A decisão de faltas será baseada em sensores em tempo real.",
+                afirmacao: "Sensores em tempo real podem garantir decisões mais rápidas e precisas."
             }
 
         ]
     },
     {
-        enunciado: "TEXTO DA PERGUNTA 2",
+        enunciado: "Qual será o impacto das mudanças nas regras de substituições no futuro do futebol?",
         alternativas: [
             {
-                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 2",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 2"
+                texto: "Permissão para substituições ilimitadas durante o jogo.",
+                afirmacao: "Substituições ilimitadas podem manter os jogadores mais frescos e o jogo mais dinâmico."
             },
             {
-                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 2",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 2"
+                texto: "Restrição de substituições a um número fixo de vezes por jogo.",
+                afirmacao: "Limitar substituições pode aumentar a estratégia e manter o equilíbrio."
             }
 
         ]
     },
     {
-        enunciado: "TEXTO DA PERGUNTA 3",
+        enunciado: "Como a implementação de uma nova regra sobre o tempo de posse de bola pode afetar o jogo?",
         alternativas: [
             {
-                texto: "TEXTO DA ALTERNATIVA 1 DA PERGUNTA 3",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 1 DA PERGUNTA 3"
+                texto: "Introdução de um limite de tempo para manter a posse de bola.",
+                afirmacao: "Um limite de tempo pode acelerar o jogo e aumentar o ritmo."
             },
             {
-                texto: "TEXTO DA ALTERNATIVA 2 DA PERGUNTA 3",
-                afirmacao: "AFIRMAÇÃO DA ALTERNATIVA 2 DA PERGUNTA 3"
+                texto: "Sem limite de tempo para a posse de bola.",
+                afirmacao: "Sem limite de tempo, o jogo pode permitir mais controle e estratégias elaboradas."
             }
 
         ]
